@@ -47,10 +47,14 @@ function acf_location_rules_match_cpt( $match, $rule, $options ){
 	
 	global $post;
 	
-    $current_post_template = get_post_meta($post->ID,'custom_post_template',true);
+	if(isset($options['cpt'])){
+		$current_post_template = $options['cpt'];	
+	}else{
+    	$current_post_template = get_post_meta($post->ID,'custom_post_template',true);
+	}
 	
     $selected_post_template = $rule['value'];
- 
+	
     if($rule['operator'] == "=="){
     	$match = ( $current_post_template == $selected_post_template );
     }elseif($rule['operator'] == "!="){

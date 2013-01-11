@@ -3,7 +3,7 @@
 Plugin Name: Support for Custom Post Templates in ACF
 Plugin URI: github.com/lukechapman/custom-post-template-support-for-acf
 Description: Adds a post template location rule to ACF for themes using the Custom Post Template plugin
-Version: 0.1
+Version: 1.0
 Author: Luke Chapman
 Author URI: www.iamlukechapman.com
 */

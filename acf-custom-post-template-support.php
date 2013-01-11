@@ -61,17 +61,12 @@ function acf_location_rules_match_cpt( $match, $rule, $options ){
 }
 
 // Add js to admin header to trigger ACFs
-// ## Not working: Cannot access update_fields() function, outside scope.
-/*add_action('admin_head', 'acf_custom_post_template_js');
+
+add_action('admin_head', 'acf_custom_post_template_js');
 
 function acf_custom_post_template_js() {
-  echo "<script>
-   jQuery('#custom_post_template').live('change', function(){
-		acf.data.cpt = jQuery(this).val();
-		update_fields();
-	});
-  </script>";
-}*/
+  echo "<script>jQuery('#custom_post_template').live('change', function(){ acf.data.cpt = jQuery(this).val(); jQuery(document).trigger('acf/update_field_groups');});</script> \n";
+}
 
 
 ?>

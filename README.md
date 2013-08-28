@@ -5,8 +5,9 @@
 --
 
 **Requires:**
-- [Custom Post Template](http://wordpress.org/extend/plugins/custom-post-template/)
-- [Advanced Custom Fields](http://advancedcustomfields.com) 3.5.7.2 or higher.
+- [Wordpress](http://wordpress.org) 3.6 or higher
+- [Custom Post Template](http://wordpress.org/extend/plugins/custom-post-template/) 1.5 or higher
+- [Advanced Custom Fields](http://advancedcustomfields.com) 4.2.2 or higher.
 
 --
 

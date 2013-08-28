@@ -3,7 +3,7 @@
 Plugin Name: Support for Custom Post Templates in ACF
 Plugin URI: github.com/lukechapman/custom-post-template-support-for-acf
 Description: Adds a post template location rule to ACF for themes using the Custom Post Template plugin
-Version: 1.1
+Version: 1.2
 Author: Luke Chapman
 Author URI: www.iamlukechapman.com
 */
@@ -25,7 +25,7 @@ function get_post_templates(){
 // Add custom post template rule to dropdown
 add_filter('acf/location/rule_types', 'acf_location_rules_types');
 function acf_location_rules_types( $choices ){
-  $choices['Post']['cpt'] = 'Template';
+  $choices['Post']['cpt'] = 'Post Template';
   return $choices;
 }
 
@@ -60,7 +60,7 @@ function acf_location_rules_match_cpt( $match, $rule, $options ){
 // Add js to admin header to trigger ACFs
 add_action('admin_head', 'acf_custom_post_template_js');
 function acf_custom_post_template_js() {
-  echo "<script>jQuery('#custom_post_template').live('change', function(){ acf.screen.page_template = jQuery(this).val(); jQuery(document).trigger('acf/update_field_groups');});</script> \n";
+  echo "<script>jQuery('#custom_post_template').live('change', function(){ acf.screen['cpt'] = jQuery(this).val(); jQuery(document).trigger('acf/update_field_groups');});</script> \n";
 }
 
 ?>

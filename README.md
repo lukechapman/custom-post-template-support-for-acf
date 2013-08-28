@@ -1,6 +1,6 @@
 ## Custom Post Template support for Advanced Custom Fields plugin
 
-##### Adds a post template location rule to Advanced Custom Fields for themes using the Custom Post Template plugin
+##### Adds a post template location rule to Advanced Custom Fields for themes using the Custom Post Template plugin (a plugin for a plugin that helps the plugin work with another plugin)
 
 --
 
